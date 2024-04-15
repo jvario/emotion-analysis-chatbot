@@ -38,7 +38,7 @@ You can find the dataset [here](https://www.kaggle.com/datasets/nelgiriyewithana
   #### api - calls
  - **/emotions_clf/LoadEmotionsModel?model_name=SGD** :  loading a model and and run pretrained LLM
  - **/emotionc_clf/TrainEmotionsModel** : training emotion models
- - 
+   
 # II.  Pipeline:
 
 #### Preproccess:
@@ -66,6 +66,10 @@ For evaluating the performance of our models, we've chosen several metrics inclu
 | SGD   | ~416810      | 0.78     | 0.56          |
 
 This table represents the evaluation results for different models based on dataset. The metrics include Accuracy, Jaccard score.
+
+
+![alt text](https://github.com/jvario/emotion-analysis-chatbot/blob/main/image_1.png)
+
 
 Pretrained LLM used for augmented generation was [Gemma](https://huggingface.co/blog/gemma).
 
