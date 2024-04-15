@@ -73,9 +73,6 @@ This table represents the evaluation results for different models based on datas
 
 Pretrained LLM used for augmented generation was [Gemma](https://huggingface.co/blog/gemma).
 
-# IV. Conclusion:
-Both the SVM and SGD models have similar accuracy scores of 0.68, indicating that they correctly predicted around 68% of the samples. This level of accuracy is quite commendable, considering the time limitation and dataset constraints. Additionally, when considering the Jaccard Score, which measures the similarity between two sets, the SGD model slightly outperforms the SVM model with a score of 0.56 compared to 0.55.
 
-In conclusion, both models demonstrate relatively good performance within the given limitations, with the SGD model showing a slightly better Jaccard Score. Further analysis, including examining additional performance metrics and conducting cross-validation, would provide a more comprehensive evaluation of the models' effectiveness.
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
