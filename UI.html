@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Test Demo</h1>
+    <div>
+      <div id="chatbox">
+        <p class="botText"><span>Good Day~</span></p>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message" />
+        <input id="buttonInput" type="submit" value="Send" />
+      </div>
+      <script>
+        var userHtml = "";
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+
+          var dots = "...";
+          var dotsElement = '<p class="botText"><span>' + dots + "</span></p>";
+          $("#chatbox").append(dotsElement);
+
+
+          $.post(
+            "http://localhost:5000/topic_clf/LoadTopicModel?model_name=SGD",
+            { text: rawText }
+          ).done(function (data) {
+            // Append the API response directly to the chatbox
+
+            $("#chatbox p.botText:last-child").remove();
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+
+          });
+        }
+
+        $("#textInput").keypress(function (e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+
+        $("#buttonInput").click(function () {
+          getBotResponse();
+        });
+      </script>
+    </div>
+  </body>
+</html>
