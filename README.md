@@ -55,20 +55,20 @@ In our single-label classification problem, where each data point is associated 
 Additionally, for feature extraction, we've applied **TF-IDF (Term Frequency-Inverse Document Frequency)**. This technique helps to represent each document in the dataset as a vector based on the importance of each word, considering both its frequency in the document and its rarity across all documents.
 
 Furthermore, we've utilized **Label Binarization** to encode the single labels into binary format, facilitating the classification task.
-For evaluating the performance of our models, we've chosen several metrics including **recall, F1 score, support, Jaccard score, and precision**. These metrics provide insights into different aspects of the model's performance, such as its ability to correctly classify each label, handle imbalanced data, and capture the trade-off between precision and recall.
+For evaluating the performance of our models, we've chosen several metrics including **recall, F1 score, supportand precision**. These metrics provide insights into different aspects of the model's performance, such as its ability to correctly classify each label, handle imbalanced data, and capture the trade-off between precision and recall.
 
 
 # III.  Results:
 
-| Emotion Model | Sample Size | Accuracy | Jaccard Score |
-|-------|-------------|----------|---------------|
-| SVM   | ~416810      | 0.78     | 0.55          |
-| SGD   | ~416810      | 0.78     | 0.56          |
+| Emotion Model | Sample Size | Accuracy |
+|-------|-------------|----------|
+| SVM   | ~416810      | 0.88     | 
+| SGD   | ~416810      | 0.88     |
 
 This table represents the evaluation results for different models based on dataset. The metrics include Accuracy, Jaccard score.
 
 
-![alt text](https://github.com/jvario/emotion-analysis-chatbot/blob/main/image_1.png)
+![alt text](https://github.com/jvario/emotion-analysis-chatbot/blob/main/image_2.png)
 
 
 Pretrained LLM used for augmented generation was [Gemma](https://huggingface.co/blog/gemma).
