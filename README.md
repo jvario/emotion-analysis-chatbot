@@ -65,7 +65,7 @@ For evaluating the performance of our models, we've chosen several metrics inclu
 | SVM   | ~416810      | 0.88     | 
 | SGD   | ~416810      | 0.88     |
 
-This table represents the evaluation results for different models based on dataset. The metrics include Accuracy, Jaccard score.
+This table represents the evaluation results for different models based on dataset. The metrics include Accuracy.
 
 
 ![alt text](https://github.com/jvario/emotion-analysis-chatbot/blob/main/image_2.png)
